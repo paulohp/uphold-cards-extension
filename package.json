@@ -1,12 +1,12 @@
 {
-  "name": "rcr-example",
+  "name": "uphold-card-extension",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Tyler Shaddix",
+  "author": "Paulo Pires",
   "dependencies": {
     "classnames": "^2.2.5",
     "react": "^15.3.1",
