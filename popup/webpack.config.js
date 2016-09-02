@@ -13,7 +13,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx', '.scss', '.json'],
+    extensions: ['', '.js', '.jsx', '.css', '.json'],
     modulesDirectories: ['node_modules']
   },
 
@@ -25,9 +25,13 @@ module.exports = {
         exclude: /(node_modules)/,
         include: path.join(__dirname, 'src'),
         query: {
-          presets: ['es2015', 'react']
+          presets: ['es2015', 'react', 'babili']
         }
-      }
+      },
+      { 
+        test: /\.css$/, 
+        loader: 'style-loader!css-loader'
+      },
     ]
   }
 };

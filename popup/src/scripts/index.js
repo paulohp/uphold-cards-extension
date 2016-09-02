@@ -6,7 +6,7 @@ import configStore from './store/configStore';
 
 import App from './components/app/App';
 import {loadCards} from './actions/cardActions';
-
+import '../styles/app.css';
 const store = configStore();
 
 

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import Cards from '../card/Cards';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -9,15 +10,13 @@ class App extends Component {
   
   render() {
     return (
-      <div>
-        {this.props.cards.map(card => <span>{card.label}</span>)}
-      </div>
+      <Cards cards={this.props.cards} />
     );
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
-  let { cards } = state;
+  const { cards } = state;
   return {
     cards
   };

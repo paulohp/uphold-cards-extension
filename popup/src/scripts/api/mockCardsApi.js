@@ -30,6 +30,9 @@ const cards = [{
 
 class CardsApi {
   static getMyCards() {
+    chrome.cookies.get({url:'https://uphold.com', name: '_token'},(cookie)=>{
+      console.log(cookie.value);
+    });
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(Object.assign([], cards));
